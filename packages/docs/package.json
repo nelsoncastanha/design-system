@@ -12,14 +12,16 @@
     "build": "storybook build"
   },
   "dependencies": {
+    "@ignite-ui/eslint-config": "*",
     "@ignite-ui/react": "*",
     "@ignite-ui/tokens": "*",
-    "@ignite-ui/eslint-config": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@storybook/addon-docs": "^10.2.6",
+    "@storybook/react-vite": "^10.2.4",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
@@ -27,13 +29,12 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-storybook": "^10.2.4",
     "globals": "^16.5.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^10.2.4",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4",
-    "storybook": "^10.2.4",
-    "@storybook/react-vite": "^10.2.4",
-    "prop-types": "^15.8.1",
-    "eslint-plugin-storybook": "^10.2.4"
+    "vite": "^7.2.4"
   }
 }
