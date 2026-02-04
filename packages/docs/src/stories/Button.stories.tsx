@@ -3,7 +3,7 @@ import { Button } from '@ignite-ui/react'
 import type { ButtonProps } from '@ignite-ui/react'
 
 export default {
-  title: 'Button',
+  title: 'Form/Button',
   component: Button,
 
   args: {
