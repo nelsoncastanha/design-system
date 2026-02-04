@@ -3,6 +3,7 @@
 import { themes } from 'storybook/theming'
 
 const preview = {
+  tags: ['autodocs'],
   parameters: {
     controls: {
       matchers: {
