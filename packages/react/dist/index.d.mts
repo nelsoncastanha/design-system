@@ -1244,4 +1244,8 @@ interface TextInputProps extends ComponentProps<typeof Input> {
 }
 declare function TextInput({ prefix, ...props }: TextInputProps): react_jsx_runtime.JSX.Element;
 
-export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, Heading, type HeadingProps, Text, TextInput, type TextInputProps, type TextProps };
+declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"textarea", {}, {}, _stitches_react_types_css_util.CSS<{}, {}, {}, {}>>;
+interface TextAreaProps extends ComponentProps<typeof TextArea> {
+}
+
+export { Avatar, type AvatarProps, Box, type BoxProps, Button, type ButtonProps, Heading, type HeadingProps, Text, TextArea, type TextAreaProps, TextInput, type TextInputProps, type TextProps };

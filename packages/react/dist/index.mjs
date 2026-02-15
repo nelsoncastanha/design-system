@@ -351,11 +351,39 @@ function TextInput(_a) {
     /* @__PURE__ */ jsx2(Input, __spreadValues({}, props))
   ] });
 }
+
+// src/components/TextArea.tsx
+import { styled as styled2 } from "@stitches/react";
+var TextArea = styled2("textarea", {
+  backgroundColor: "$gray900",
+  padding: "$3 $4",
+  borderRadius: "$sm",
+  boxSizing: "border-box",
+  border: "2px solid $gray900",
+  fontFamily: "$default",
+  fontSize: "$sm",
+  color: "$white",
+  fontWeight: "$regular",
+  resize: "vertical",
+  minHeight: 80,
+  "&:focus": {
+    outline: 0,
+    borderColor: "$ignite300"
+  },
+  "&:disabled": {
+    outline: 0.5,
+    cursor: "not-allowed"
+  },
+  "&:placeholder": {
+    color: "$gray400"
+  }
+});
 export {
   Avatar2 as Avatar,
   Box,
   Button,
   Heading,
   Text,
+  TextArea,
   TextInput
 };
