@@ -8,7 +8,14 @@ export default {
   args: {
     src: 'https://github.com/nelsoncastanha.png',
     alt: 'Nelson Castanha',
-  }
+  },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      }
+    }
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {
