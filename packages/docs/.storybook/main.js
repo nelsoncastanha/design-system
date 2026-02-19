@@ -13,7 +13,10 @@ function getAbsolutePath(value) {
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: ['../src/pages/**/*.mdx', '../src/stories/**/*.stories.tsx'],
-  addons: [getAbsolutePath('@storybook/addon-docs')],
+  addons: [
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath("@storybook/addon-a11y")
+  ],
   framework: getAbsolutePath('@storybook/react-vite'),
   viteFinal: async (config, { configType }) => {
     // Prefer ESM fields and avoid prebundling the local package which may contain CJS code
