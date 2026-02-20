@@ -19,15 +19,23 @@ const config = {
   ],
   framework: getAbsolutePath('@storybook/react-vite'),
   viteFinal: async (config, { configType }) => {
-    // Prefer ESM fields and avoid prebundling the local package which may contain CJS code
-    config.resolve = config.resolve || {}
-    config.resolve.mainFields = ['module', 'browser', 'main']
-    config.optimizeDeps = config.optimizeDeps || {}
-    config.optimizeDeps.exclude = config.optimizeDeps.exclude || []
-    if (!config.optimizeDeps.exclude.includes('@ignite-ui/react')) {
-      config.optimizeDeps.exclude.push('@ignite-ui/react')
-    }
-    return config
+  // 👇 Add this block
+  if (configType === 'PRODUCTION') {
+    config.base = '/design-system/'
   }
+
+  // Prefer ESM fields and avoid prebundling the local package which may contain CJS code
+  config.resolve = config.resolve || {}
+  config.resolve.mainFields = ['module', 'browser', 'main']
+
+  config.optimizeDeps = config.optimizeDeps || {}
+  config.optimizeDeps.exclude = config.optimizeDeps.exclude || []
+
+  if (!config.optimizeDeps.exclude.includes('@ignite-ui/react')) {
+    config.optimizeDeps.exclude.push('@ignite-ui/react')
+  }
+
+  return config
+}
 }
 export default config
